@@ -1,10 +1,9 @@
 import logging
+import socket as csocket
+from socket import gaierror, has_dualstack_ipv6
 
 from locust.exception import RPCError, RPCReceiveError, RPCSendError
 from locust.util.exception_handler import retry
-
-import socket as csocket
-from socket import gaierror, has_dualstack_ipv6
 
 import msgpack.exceptions as msgerr
 import zmq.error as zmqerr
